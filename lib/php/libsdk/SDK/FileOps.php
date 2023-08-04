@@ -132,8 +132,9 @@ retry:
 
 		curl_setopt($ch, CURLOPT_HEADER, false);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		//curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+		//curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, CURL_SSLVERSION_MAX_TLSv1_2);
 		curl_setopt($ch, CURLOPT_USERAGENT, Config::getSdkUserAgentName());
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
 
